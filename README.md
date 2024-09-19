@@ -1,20 +1,35 @@
-# Handwritten Equation solver
+# Handwritten Equation Solver
 
-[Link to application](https://surajsubramanian.github.io/equations-solver/) (Not functional currently as Heroku [discontinued free product plans](https://blog.heroku.com/next-chapter))
+![Application Link](https://img.shields.io/badge/Live-Demo-blue)
 
-The application will be able to predict and solve handwritten mathematical equations from the given image. The system should be capable of solving expression involving arithmetic operations (addition, subtraction, multiplication, division) and solve equations of any degree (linear, quadratic, cubic and so on).
 
-Key AI concepts used include OCR (Optical Character Recognition) and CNN (Convolutional Neural Networks). OCR is used to preprocess the image and segment characters, while CNN is used to predict the characters.
+**Handwritten Equation Solver** is an AI-powered application designed to recognize and solve handwritten mathematical equations from an input image. The system leverages cutting-edge technologies like **Optical Character Recognition (OCR)** and **Convolutional Neural Networks (CNN)** to identify characters, and solve equations ranging from basic arithmetic to complex polynomial equations.
 
-# Local execution
+## 🚀 Features
 
-Download the repo, move to the folder and run
+- **Handwritten Equation Prediction**: Supports input via sketchpad or image upload.
+- **Equation Solver**: Capable of solving equations involving addition, subtraction, multiplication, division, and equations of any degree (linear, quadratic, cubic, etc.).
+- **Character Recognition**: Uses CNN and OCR for accurate segmentation and prediction of handwritten characters.
+- **Real-time Processing**: Get results instantly after uploading or drawing the equation.
+- **Interactive Frontend**: Built using ReactJS for an intuitive user experience.
 
-## Installation
+---
 
-The repository can either be cloned or downloaded as a zip.
+## 🖥️ Local Setup
 
-Run `npm install` inside the project directory to install all dependencies.
+To run the project locally, follow these steps:
+
+### 📒 Prerequisites
+- [Node.js](https://nodejs.org/)
+- [Python 3.8+](https://www.python.org/)
+- [FastAPI](https://fastapi.tiangolo.com/)
+
+### 🔧 Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/equations-solver.git
+   cd equations-solver
 
 ## Local setup
 
@@ -40,7 +55,7 @@ docker-compose up --build
 ```
 The frontend can be viewed at http://localhost:3000 and the API can be viewed at http://localhost:8000
 
-## Result
+## 📸 Result
 
 ### When image is written through sketchpad
 
@@ -56,7 +71,7 @@ The frontend can be viewed at http://localhost:3000 and the API can be viewed at
     <img src="./images/uploaded2.png" alt="uploaded-2" width="500" />
 </p>
 
-## Overview
+## 🔍 Overview
 
 <img src="./images/architecture.png" alt="Architecture" height = "600" width = "600">
 
@@ -68,7 +83,7 @@ The frontend can be viewed at http://localhost:3000 and the API can be viewed at
 
   - The Equation Solver solves the mathematical equation and passes it back to the Frontend where it can be viewed.
 
-## Character Segmentation
+## 🧩 Character Segmentation
 
 The major steps include : Noise Removal, Binarization, Thresholding and Image Segmentation.
 
@@ -76,7 +91,7 @@ The Binarized image and the segmented images can be viewed below :
 
 <img src="./images/char-segmentation.png" alt="Architecture" height = "600" width = "600">
 
-## Solving the Equation
+## 🔢 Solving the Equation
 
 After each of the character in the image is detected, the string containing the equation is passed to this final module which solves the equation or mathematical expression.
 
@@ -88,7 +103,7 @@ The equation can be of two types :
 
 The 2 types of equations are distinguished by checking if the equation contains ‘=‘. If the equation contains ‘=‘, it is interpreted as the 2nd type, otherwise it is interpreted as the 1st type.
 
-## Links
+## 📚 Links
 
 [Link to the presentation](https://drive.google.com/file/d/1f7ZVFmpK5mBtrZ68hBml8bGoJ_VRc_ih/view?usp=sharing)
 
@@ -104,5 +119,5 @@ The 2 types of equations are distinguished by checking if the equation contains 
 
 [React bootstrap](https://react-bootstrap.github.io/)
 
-## Contributing
+## 🤝 Contributing
 We enthusiastically welcome contributions, pull requests are most welcome! Your input is invaluable, and we appreciate any contributions, whether they are major changes or minor enhancements.
